@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="popup-employee-form">
+      <form action="" id="employee-form">
+        <fieldset>
+          <legend>Employee Details</legend>
+          <label for="first-name">First Name</label>
+          <input type="text" name="first-name" id="first-name" required />
+
+          <label for="second-name">Second Name</label>
+          <input type="text" name="second-name" id="second-name" required />
+
+          <label for="photo">Photo (optional)</label>
+          <input type="file" name="photo" id="photo" accept="image/*" />
+
+          <label for="post">Post</label>
+          <select name="post" id="post" required>
+            <option value="" disabled selected>---Select One---</option>
+            <option value="Software Engineer">Software Engineer</option>
+            <option value="Product Manager">Product Manager</option>
+            <option value="Front-End Developer">Front-End Developer</option>
+            <option value="Back-End Developer">Back-End Developer</option>
+            <option value="Full-Stack Developer">Full-Stack Developer</option>
+          </select>
+
+          <label for="address">Address</label>
+          <input type="text" name="address" id="address" required />
+
+          <label for="phone">Phone</label>
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            pattern="[0-9]{10}"
+            required
+          />
+
+          <label for="salary">Salary</label>
+          <input type="number" name="salary" id="salary" min="0" required />
+        </fieldset>
+        <button type="submit">Add Employee</button>
+      </form>
+    </div>
+
+    <div id="wrapper">
+      <header>
+        <h1>Employee Management System</h1>
+      </header>
+
+      <main>
+        <aside id="side-bar">
+            <div id="employee-list-container">
+                <p class="no-employee-msg">No employees yet.</p>
+                <ul id="employee-list">
+
+                </ul>
+            </div>
+            <div id="add-employee-btn-container">
+                <button id="add-employee-btn">Add Employee</button>
+            </div>
+        </aside>
+
+        <section id="main-content">
+            <div id="employee-preview-container">
+                <p class="no-employee-msg">No employees yet.</p>
+            </div>
+        </section>
+
+      </main>
+
+      <footer>
+        <p>&copy; Employee Management System <span id="github-id-link-container"><a href="https://github.com/DeveloperZeal" target="_blank">DeveloperZeal</a></span></p>
+      </footer>
+
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
