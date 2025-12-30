@@ -53,8 +53,8 @@ body {
 
 fieldset {
   border: none;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
 }
 
@@ -64,6 +64,7 @@ legend {
   margin-bottom: 1rem;
   color: var(--accent);
   padding: 0;
+  grid-column: 1 / -1;
 }
 
 label {
@@ -71,6 +72,22 @@ label {
   color: var(--text-secondary);
   margin-bottom: 0.5rem;
   display: block;
+}
+
+label[for="first-name"],
+label[for="second-name"],
+label[for="address"],
+label[for="phone"],
+label[for="salary"] {
+  grid-column: 1 / -1;
+}
+
+input[id="first-name"],
+input[id="second-name"],
+input[id="address"],
+input[id="phone"],
+input[id="salary"] {
+  grid-column: 1 / -1;
 }
 
 input,
@@ -82,6 +99,7 @@ select {
   border-radius: 4px;
   font-size: 0.95rem;
   transition: all 0.2s;
+  width: 100%;
 }
 
 input:focus,
@@ -89,6 +107,22 @@ select:focus {
   outline: none;
   border-color: var(--accent);
   box-shadow: 0 0 0 2px rgba(74, 158, 255, 0.2);
+}
+
+#employee-form button {
+  background-color: var(--accent);
+  color: #000;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin-top: 1rem;
+  width: auto;
 }
 
 button {
